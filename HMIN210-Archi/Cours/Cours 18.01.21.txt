@@ -1,0 +1,6 @@
+--- Chapitre RMI ---
+
+On donne au client un proxy, qui a la même interface que l'objet distant.
+Proxy met en place la communication.
+Le squelette (l'objet distant) invoque réellement la méthode, puis communique au client la valeur de retour.
+Le client a le sentiment que le service est local.
