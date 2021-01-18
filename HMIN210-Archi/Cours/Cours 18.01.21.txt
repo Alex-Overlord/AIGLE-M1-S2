@@ -4,3 +4,33 @@ On donne au client un proxy, qui a la même interface que l'objet distant.
 Proxy met en place la communication.
 Le squelette (l'objet distant) invoque réellement la méthode, puis communique au client la valeur de retour.
 Le client a le sentiment que le service est local.
+
+> Intéractions
+
+Le registre sert à enregistrer des
+RMI : Remote Method Invocation
+EJB : Entreprise Java Bean (composants serveurs donc non visuels qui respectent les spécifications d'un modèle éditées par Sun. Ces spécifications définissent une architecture, un environnement d'exécution et un ensemble d'API)
+
+> Design pattern Proxy
+
+
+
+> RPC : Remote Procedure Call
+
+Apporte la notion de référente distante, matérialisé par un proxy.
+
+> 14 Schéma général 
+
+Mettre l'interface Distance sur la ClasseLocale et ClasseDistante.
+
+> 22
+
+Ecrire l'interface.
+Générer proxy et squelette.
+Ecrire serveur.
+Ecrire le client.
+
+
+
+
+

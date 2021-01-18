@@ -1,0 +1,41 @@
+* Q1. Donner la procédure exacte pour lancer le serveur puis le client.
+
+On commence par lancer le registre (qui tourne donc dans une JVM tierce sur localhost:1099) :
+> rmiregistry &
+
+Ensuite on lance le serveur, qui  récupère le registre via le RmiRegistry.localRegistry(); :
+> java helloWorld.Server
+
+Enfin on lance le client en lui passant en paramètre le port sur lequel le registre écoute :
+> java helloWorld.Client 1099
+
+
+* Q2. Que se passe t-il si on remplace la ligne 15 de Server.java par la ligne 14 (commentée) ?
+
+Si on commente la ligne 15 et décommente la ligne 14, alors le registre est lancé depuis le Serveur, et tourne donc dans la même machine virtuelle que le serveur.
+
+Pour lancer le serveur et le client, on fait alors (on ne lance plus le resgistre) :
+> java helloWorld.Server
+
+Enfin on lance le client en lui passant un paramètre le port sur lequel le registre écoute. :
+> java helloWorld.Client 1099
+
+* Q3. Donnez les affichages chez le client et chez le serveur.
+
+SERVER
+Server ready
+The server prints : Hello, world !
+
+CLIENT
+response : Hello, World !
+
+* Q4. Dans quelle JVM seront créées les objets de type HelloImpl ?
+
+Dans la JVM du serveur.
+
+* Q5. A quoi sert l'interface Hello.java ?
+
+- à typer coté client le proxy reçu à la suite du lookup --> mise en preuve du patron de conception proxy.
+- à spécifier les méthodes accessibles
+
+* Q6. Donnez des exemples d'exceptions pouvant être attrapées à la ligne 22 de Server.java.

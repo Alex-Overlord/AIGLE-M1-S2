@@ -13,9 +13,9 @@ public class Server {
 			HelloImpl obj = new HelloImpl();
 			// Registry registry = LocateRegistry.createRegistry(1099);
 			Registry registry = LocateRegistry.getRegistry();
-			if (registry==null){
+			if (registry==null) {
 				System.err.println("RmiRegistry not found");
-			}else{
+			} else {
 				registry.bind("Hello", obj);
 				System.err.println("Server ready");
 			}
