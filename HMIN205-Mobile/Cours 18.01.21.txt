@@ -1,0 +1,12 @@
+* MCC
+
+75% : projet
+25% : TPs
+Pas de partiel
+
+* Projet
+
+3 dépots pour le projet
+Liste de sujet pour le projet
+En binôme
+En Java
