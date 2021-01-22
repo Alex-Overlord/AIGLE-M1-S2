@@ -1,0 +1,88 @@
+* Exercice 1
+
+2) Rajouter après "setContentView(tv);" :
+
+        EditText editText = new EditText(this);
+        editText.setText("Ceci est un Edit");
+        setContentView(editText);
+
+
+3) Au dessus, le TextView est défini dans le corps de la méthode onCreate. Au dessous, le TextView est défini dans un fichier xml dans le dossier de ressource.
+
+4) L'EditText en xml :
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+		
+* Exercice 2
+
+1) Cette fois-ci, il n'y a ni TextView, ni EditText, mais un Button défini dans un LinearLayout. Les variables de type string sont définis dans le sous répertoire "strings" du dossier des ressources.
+
+2) Dans activity_main.xml :
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/text1"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+			
+Dans strings.xml
+
+    <string name="text1">Ma première application Android</string>
+	
+* Exercice 3
+
+> Layout 1 :
+
+Un LinearLayout de 3 Button dont le 3e prends a une hauteur maximum tant que les 2 premiers Button s'affiche. (affiché de haut en bas)
+
+> Layout 2 :
+
+Un RelativeLayout où il est possible de placer des éléments les uns par rapport à d'autres. Il prend tout l'écran ici.
+
+Donc le premier Button prend seulement l'espace qu'il a besoin et par défaut est place en haut à gauche.
+
+Ensuite, le TextView est défini comme en dessous du Button 3 avec une marche de 65dp.
+
+Un EditText placé sur le bord droit de son parent (le RelativeLayout), le dessus de l'élément étant aligné avec celui du TextView et à droite du Button 2.
+
+Un Button 0 placé sur le bord droit de son parent, en dessous du Button 1.
+
+Un Button 3 placé sur le bord gauche de son parent et en dessous du Button 1.
+
+Un Button 2 en dessous du Button 1 et en même temps la droite de ce dernier.
+
+> Layout 3 :
+
+Un TableLayout dont chaque colonne est aggrandissable ou rétrécissable, remplissant ici tout l'écran.
+
+Une première ligne de la table avec un padding de 5dip contenant :
+- TextView dans la première colonne, affichant "Col 1"
+- Un Button dans la colonne 2, affichant "Col 2".
+
+Une deuxième ligne de la table avec un padding de 5dip contenant :
+- Un EditText qui occupera 2 colonnes et affiche "Col 1 & 2".
+
+Une View avec un font rouge ayant défini la hauteur à 4 dip et dont la largeur est en match_parent par défaut.
+
+Une troisième ligne de la table avec un padding de 5dip contenant : 
+- Un TextView affichant "Col 1" dans la première colonne
+- Un Button affichant "Col 2" dans la seconde colonne
+- Un Button affichant "Col 3" dans la troisième colonne
+- Un Button affichant "Col 4" dans la quatrième colonne
+
+Une quatrième ligne de la table avec un padding de 5dip contenant :
+- Un Button dans la colonne 3 (avec l'index 2) affichant "Col 3"
+
+Une cinquième colonne de la table avec un padding de 5dip contenant :
+- Un Button à l'index 1 donc à la colonne 2, affichant "Col 2"
+
+* Exercice 4
+
+1) L'activité est constitué d'un LinearLayout avec un Button, quand on clic sur le Button, un pop-up (Toast) affiche "Message Bouton 1"

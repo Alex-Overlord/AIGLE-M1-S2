@@ -1,0 +1,32 @@
+1) Acteurs : 
+
+- François (directeur)
+(- Enfants)
+- Juge
+- Educateurs
+- Familles d'accueil
+- Assistante sociale
+- Services généraux
+(- Centre médicaux, orthophonistes, instituteurs)
+- Psychologue
+- 
+
+2) Les thèmes :
+
+1. Ordonnance de placement de l'enfant (judiciaire)
+> "vécu" lié à >
+2. Placement de l'enfant (famille)
+2.(bis) Si placement de l'enfant dans l'internat go to 4.
+> lié à >
+3. Suivi de l'enfant (visite)
+(Conseils du psy)
+Versement allocations
+> lié à >
+4. Départ de l'enfant
+5. Archivage
+
+6. Recrutement Familles
+
+7. Renouvellement Agrément familles
+
+
