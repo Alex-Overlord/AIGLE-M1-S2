@@ -86,3 +86,7 @@ Une cinquième colonne de la table avec un padding de 5dip contenant :
 * Exercice 4
 
 1) L'activité est constitué d'un LinearLayout avec un Button, quand on clic sur le Button, un pop-up (Toast) affiche "Message Bouton 1"
+
+2) Fait (voir Android Studio)
+
+3) 

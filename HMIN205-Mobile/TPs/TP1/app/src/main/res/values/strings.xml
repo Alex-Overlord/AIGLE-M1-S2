@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="menu_settings">Settings</string>
+    <string name="button_label">Show message</string>
+    <string name="image_content">image</string>
+    <string name="text1">Ma première application Android</string>
+    <string name="btn1">Button 1</string>
+    <string name="btn2">Button 2</string>
+    <string name="btn1Text">Button Message 1</string>
+    <string name="btn2Text">Button Message 2</string>
+    <string name="adTitle">AlertDialog</string>
+    <string name="adMsg">Exercice 4</string>
+    <string name="adPositiveButton">OK</string>
+    <string name="adMsg2">You have done a long click !</string>
+</resources>

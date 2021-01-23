@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="menu_settings">Paramètres</string>
+    <string name="button_label">Montrer message</string>
+    <string name="image_content">image</string>
+    <string name="text1">Ma première application Android</string>
+    <string name="btn1">Bouton 1</string>
+    <string name="btn2">Bouton 2</string>
+    <string name="btn1Text">Message Bouton 1</string>
+    <string name="btn2Text">Message Bouton 2</string>
+    <string name="adTitle">Titre du pop-up</string>
+    <string name="adMsg">Exercice 4</string>
+    <string name="adPositiveButton">OK</string>
+    <string name="adMsg2">You have done a long click !</string>
+</resources>
