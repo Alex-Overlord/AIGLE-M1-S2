@@ -87,6 +87,15 @@ Une cinquième colonne de la table avec un padding de 5dip contenant :
 
 1) L'activité est constitué d'un LinearLayout avec un Button, quand on clic sur le Button, un pop-up (Toast) affiche "Message Bouton 1"
 
-2) Fait (voir Android Studio)
+2,3) Fait (voir Android Studio)
 
-3) 
+* Exercice 5
+
+Le code créer un CheckBox avec 3 check et un button dans le XML. 
+
+Puis dans le Java : 
+- Il défini addListenerOnChkWindows, qui est appelé quand on check Windows, et qui affiche dans un Toast "Bro, try Linux :)"
+- Il défini addListenerOnButton, qui est appelé quand on click sur le button, et qui affiche un Toast avec le résultat de notre sélection.
+
+* Exercice 6
+
