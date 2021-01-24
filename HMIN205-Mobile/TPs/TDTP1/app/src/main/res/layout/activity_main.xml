@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvmsg"/>
+
+    <EditText
+        android:id="@+id/editTextFirstName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/etfirstnametext"/>
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/etlastnametext" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="@string/etage"/>
+
+    <EditText
+        android:id="@+id/editTextDomain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/etdomain" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:text="@string/etphonetext"/>
+
+    <Button
+        android:id="@+id/btnValidate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btntvalidatetext"/>
+
+
+
+
+</LinearLayout>
