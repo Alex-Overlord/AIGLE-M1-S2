@@ -1,0 +1,26 @@
+* Exercice :
+
+Vocabulaire :
+- Concepts primitifs : A, B
+- Roles primitifs : R
+
+Interprétation :
+- D = {1, 2, 3, 4, 5}
+- f(A) = {1, 2, 3}, f(B) = {2, 3, 4}
+- f(R) = {(2, 2), (2, 3), (1, 5)}
+
+Calculer les interprétations des concepts suivants :
+
+1. A AND NOT B, 
+2. R SOME (A AND B)
+3. R ONLY (A AND B)
+
+1. I(A AND NOT B) 
+= I(A) INTER I(NOT B)
+= {1}
+
+2. I(R SOME (A AND B))
+= {2}
+
+3. I(R ONLY (A AND B))
+= {2, 3, 4, 5}
