@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">TP1</string>
-    <string name="tvmsg">Please fill the fields :</string>
-    <string name="etfirstnametext">FirstName</string>
-    <string name="etlastnametext">LastName</string>
-    <string name="etage">Age</string>
-    <string name="etdomain">Domain</string>
-    <string name="etphonetext">Téléphone</string>
-    <string name="btntvalidatetext">Valider</string>
+    <string name="tv">Please fill the fields :</string>
+    <string name="firstname">FirstName</string>
+    <string name="lastname">LastName</string>
+    <string name="age">Age</string>
+    <string name="domain">Domain</string>
+    <string name="phone">Telephone</string>
+    <string name="validate">Validate</string>
 </resources>
