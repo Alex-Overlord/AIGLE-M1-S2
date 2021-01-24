@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#"
+     xml:base="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mange">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mangePar"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mangePar -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mangePar">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Animal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#partieDe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#partieDe">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Animal">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Arbre -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Arbre">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Arbre"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#partieDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Arbre"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Carnivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Carnivore">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Animal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mange"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Animal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Feuille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Feuille">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#partieDe"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Girafe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Girafe">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Herbivore"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mange"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Feuille"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Herbivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Herbivore">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Animal"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mange"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#partieDe"/>
+                                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Lion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Lion">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Carnivore"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mange"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Herbivore"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#PlanteSavoureuse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#PlanteSavoureuse">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mangePar"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Carnivore"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mangePar"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Herbivore"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#PlanteSavoureuse"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mangePar"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Carnivore"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#mangePar"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Herbivore"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:annotatedTarget>
+        <rdfs:comment>Une PlanteSavoureuse est une Plante qui est mangée par un Herbivore et aussi par un Carnivore</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Batavia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Batavia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Feuille"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#LaPalme -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#LaPalme">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Léo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Léo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Lion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Olivier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Olivier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Arbre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Rose-Marie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Rose-Marie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#PlanteSavoureuse"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Sophie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Sophie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Girafe"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

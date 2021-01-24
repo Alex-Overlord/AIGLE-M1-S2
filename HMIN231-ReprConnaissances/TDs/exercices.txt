@@ -1,4 +1,4 @@
-* Exercice :
+* Exercice 1 :
 
 Vocabulaire :
 - Concepts primitifs : A, B
@@ -24,3 +24,18 @@ Calculer les interprétations des concepts suivants :
 
 3. I(R ONLY (A AND B))
 = {2, 3, 4, 5}
+
+
+* Exercice 2 :
+
+- Femme EQUIV Personne AND Femelle
+- Homme EQUIV Personne AND NOT Femelle
+- Père EQUIV Homme AND (EXIST aEnfant.Personne)
+- Mère EQUIV Femme AND (EXIST aEnfant.Personne)
+- Parent EQUIV Père OR Mère
+- Grand-Mère EQUIV Mère (EXIST aEnfant.Parent)
+- Mère avec plusieurs enfant EQUIV Mère (>= 2 aEnfant)
+- Mère sans fille EQUIV Mère ONLY aEnfant.Homme
+- Epouse EQUIV Femme AND ONLY aCommeMari.Homme
+
+
