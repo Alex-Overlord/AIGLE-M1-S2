@@ -39,3 +39,8 @@ Dans la JVM du serveur.
 - à spécifier les méthodes accessibles
 
 * Q6. Donnez des exemples d'exceptions pouvant être attrapées à la ligne 22 de Server.java.
+
+* Q7. Quelle est la différence entre Naming.bind et Naming.rebind ?
+
+* Q8. Que se passe t-il si on ne passe pas d'argument en ligne de commande quand on lance le client ?
+
