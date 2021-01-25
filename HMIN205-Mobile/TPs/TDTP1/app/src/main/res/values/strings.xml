@@ -7,4 +7,6 @@
     <string name="domain">Domain</string>
     <string name="phone">Telephone</string>
     <string name="validate">Validate</string>
+    <string name="form" />
+    <string name="cancel">cancel</string>
 </resources>

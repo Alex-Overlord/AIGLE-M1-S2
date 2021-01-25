@@ -1,12 +1,18 @@
 package com.example.tp1;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.InputType;
+import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -65,13 +71,64 @@ public class MainActivity extends AppCompatActivity {
         ageLayout.setLayoutParams(layoutParams);
         main_layout.addView(ageLayout);
 
-        TextInputLayout domainLayout = new TextInputLayout(this);
-        TextInputLayout phoneLayout = new TextInputLayout(this);
-
-
+        // ageEdit
         TextInputEditText ageEdit = new TextInputEditText(this);
+        ageEdit.setInputType(InputType.TYPE_CLASS_NUMBER);
+        ageLayout.addView(ageEdit);
+
+        // domainLayout
+        TextInputLayout domainLayout = new TextInputLayout(this);
+        domainLayout.setHint(getString(R.string.domain));
+        domainLayout.setHintEnabled(true);
+        domainLayout.setLayoutParams(layoutParams);
+        main_layout.addView(domainLayout);
+
+        // domainEdit
         TextInputEditText domainEdit = new TextInputEditText(this);
+        domainEdit.setInputType(InputType.TYPE_CLASS_TEXT);
+        domainLayout.addView(domainEdit);
+
+        // phoneLayout
+        TextInputLayout phoneLayout = new TextInputLayout(this);
+        phoneLayout.setHint(getString(R.string.phone));
+        phoneLayout.setHintEnabled(true);
+        phoneLayout.setLayoutParams(layoutParams);
+        main_layout.addView(phoneLayout);
+
+        // phoneEdit
         TextInputEditText phoneEdit = new TextInputEditText(this);
+        phoneEdit.setInputType(InputType.TYPE_CLASS_PHONE);
+        phoneLayout.addView(phoneEdit);
+
+        // validate
+        Button validate = new Button(this);
+        validate.setId(R.id.validate);
+        validate.setText(getString(R.string.validate));
+        validate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                String form = "" + lastNameEdit.getText() + firstNameEdit.getText()
+                        + ageEdit.getText() + domainEdit.getText() + phoneEdit.getText();
+
+                new AlertDialog.Builder(MainActivity.this)
+                        .setTitle(R.string.validate)
+                        .setMessage(form)
+                        .setPositiveButton(R.string.validate, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                validate.setBackgroundColor(getResources().getColor(R.color.green));
+                            }
+                        })
+                        .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                validate.setBackgroundColor(getResources().getColor(R.color.red));
+                            }
+                        })
+                        .create().show();
+            }
+        });
+        main_layout.addView(validate);
 
 
     }
