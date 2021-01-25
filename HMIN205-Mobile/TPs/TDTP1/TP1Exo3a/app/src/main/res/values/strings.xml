@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TP1</string>
+    <string name="tv">Please fill the fields :</string>
+    <string name="firstname">FirstName</string>
+    <string name="lastname">LastName</string>
+    <string name="age">Age</string>
+    <string name="domain">Domain</string>
+    <string name="phone">Telephone</string>
+    <string name="validate">Validate</string>
+</resources>
