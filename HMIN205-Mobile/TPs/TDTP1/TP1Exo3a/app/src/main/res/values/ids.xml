@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="validate" type="id" />
+    <item name="lastNameEdit" type="id" />
 </resources>
