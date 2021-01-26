@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-7="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aCommeMari -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aCommeMari">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femme"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Homme"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aEnfant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aEnfant">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Epouse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Epouse">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aCommeMari"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Homme"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femelle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femme">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femelle"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Homme"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#GrandMere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#GrandMere">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Mere"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aEnfant"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Parent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Homme -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Homme">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femelle"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Mere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Mere">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aEnfant"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#MereAvecPlusieursEnfants -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#MereAvecPlusieursEnfants">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Mere"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aEnfant"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#MereSansFille -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#MereSansFille">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Mere"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aEnfant"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femme"/>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Parent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Parent">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Mere"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Pere"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Pere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Pere">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Homme"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#aEnfant"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Personne"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Alice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Femme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Marie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Marie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#MereSansFille"/>
+        <aEnfant rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Paul"/>
+        <aEnfant rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Pierre"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Paul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Paul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Homme"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Pierre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Pierre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Pere"/>
+        <aEnfant rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-7#Alice"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

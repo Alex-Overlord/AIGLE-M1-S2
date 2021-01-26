@@ -76,7 +76,7 @@
     <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Arbre"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Plante"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#partieDe"/>
@@ -108,7 +108,6 @@
     <!-- http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Feuille -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Feuille">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#Branche"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/alex/ontologies/2021/0/untitled-ontology-4#partieDe"/>
