@@ -1,10 +1,9 @@
-package cabinet;
+package cabinet_v2;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
 public interface IAnimal extends Remote {
-	
 	public String get_name() throws RemoteException;
 	public void set_name(String _name) throws RemoteException;
 	public String get_masterName() throws RemoteException;

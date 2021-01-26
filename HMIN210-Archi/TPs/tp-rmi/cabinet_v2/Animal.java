@@ -1,4 +1,4 @@
-package cabinet;
+package cabinet_v2;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -24,31 +24,31 @@ public class Animal extends UnicastRemoteObject implements IAnimal{
 		_dossierSuivi = dossierSuivi;
 	}
 	
-	public String get_name() {
+	public String get_name() throws RemoteException {
 		return _name;
 	}
-	public void set_name(String _name) {
+	public void set_name(String _name) throws RemoteException {
 		this._name = _name;
 	}
-	public String get_masterName() {
+	public String get_masterName() throws RemoteException {
 		return _masterName;
 	}
-	public void set_masterName(String _masterName) {
+	public void set_masterName(String _masterName) throws RemoteException {
 		this._masterName = _masterName;
 	}
-	public Species get_species() {
+	public Species get_species() throws RemoteException {
 		return _species;
 	}
-	public void set_species(Species _species) {
+	public void set_species(Species _species) throws RemoteException {
 		this._species = _species;
 	}
-	public String get_race() {
+	public String get_race() throws RemoteException {
 		return _race;
 	}
-	public void set_race(String _race) {
+	public void set_race(String _race) throws RemoteException {
 		this._race = _race;
 	}
-	public DossierSuivi get_dossierSuivi() {
+	public DossierSuivi get_dossierSuivi() throws RemoteException {
 		return _dossierSuivi;
 	}
 	public void set_dossierSuivi(DossierSuivi _dossierSuivi) {
@@ -56,7 +56,7 @@ public class Animal extends UnicastRemoteObject implements IAnimal{
 	}
 	
 	@Override
-	public String description() {
+	public String description() throws RemoteException {
 		String result = "[Description]\n";
 		result += "Name : "+this._name+"\n"
 				+"MasterName : "+this._masterName+"\n"
@@ -67,11 +67,8 @@ public class Animal extends UnicastRemoteObject implements IAnimal{
 	}
 	
 	@Override
-	public void setSuivi(String suivi) {
+	public void setSuivi(String suivi) throws RemoteException {
 		_dossierSuivi.setSuivi(suivi);
 	}
   
-//	public void addSuivi(String suivi) {
-//		
-//	}
 }

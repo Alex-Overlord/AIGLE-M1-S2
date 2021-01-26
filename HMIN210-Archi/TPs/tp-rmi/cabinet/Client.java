@@ -16,27 +16,19 @@ public class Client {
 			SecurityManager manager = new SecurityManager();
 			System.setSecurityManager(manager);
 			IAnimal stub = (IAnimal) registry.lookup("Animal");
-			String response = stub.toString();
-			System.out.println("response: " + response);
+//			System.out.println("response: " + stub.toString());
 			System.out.println(stub.description());
 			
-			try (Scanner scanner = new Scanner(System.in)) {
-				System.out.println("Name : ");
-				stub.set_name(scanner.nextLine());
-				System.out.println("MasterName : ");
-				stub.set_masterName(scanner.nextLine());
-				System.out.println("Species name : ");
-				String speciesName = scanner.nextLine();
-				System.out.println("Species average life : ");
-				int speciesAverageLife = Integer.parseInt(scanner.nextLine());
-				stub.set_species(new Species(speciesName, speciesAverageLife));
-				System.out.println("Race : ");
-				stub.set_race(scanner.nextLine());
-				System.out.println("Suivi du Dossier de suivi : ");
-				String suivi = scanner.nextLine();
-				stub.set_dossierSuivi(new DossierSuivi(suivi));
-			}
+			stub.set_name("Lion");
+			stub.set_masterName("Bob");
+			stub.set_species(new Species("Mammifere", 12));
+			stub.set_race("etre vivant");
+			DossierSuivi ds = new DossierSuivi("Ceci est un suivi"); // envoie un string dans une methode qui elle va creer le DOssierSuivi
+			stub.set_dossierSuivi(ds);
+			stub.setSuivi("Ceci est un suivi");
+			
 			System.out.println(stub.description());
+			
 		} catch (Exception e) {
 			System.err.println("Client exception: " + e.toString());
 			e.printStackTrace();

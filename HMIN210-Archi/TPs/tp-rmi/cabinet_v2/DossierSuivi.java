@@ -1,12 +1,11 @@
-package cabinet;
+package cabinet_v2;
 
-import java.io.Serializable;
+//import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public class DossierSuivi extends UnicastRemoteObject implements IDossierSuivi {
-//public class DossierSuivi implements Serializable {
+public class DossierSuivi extends UnicastRemoteObject implements Remote {
 	private static final long serialVersionUID = 1L;
 	private String _suivi;
 	
