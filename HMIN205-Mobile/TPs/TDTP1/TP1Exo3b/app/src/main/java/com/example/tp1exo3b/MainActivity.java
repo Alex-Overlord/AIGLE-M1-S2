@@ -25,8 +25,8 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayout main_layout = new LinearLayout(this);
         LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.MATCH_PARENT);
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
         main_layout.setLayoutParams(linearLayoutParams);
         main_layout.setOrientation(LinearLayout.VERTICAL);
         setContentView(main_layout);
