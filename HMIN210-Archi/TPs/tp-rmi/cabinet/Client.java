@@ -20,12 +20,17 @@ public class Client {
 			System.out.println(stub.description());
 			
 			stub.set_name("Lion");
-			stub.set_masterName("Bob");
+			stub.set_masterName("Daniel");
 			stub.set_species(new Species("Panthera leo", 12));
 			stub.set_race("Le lion d'Afrique");
-//			DossierSuivi ds = new DossierSuivi("Ceci est un suivi"); // envoie un string dans une methode qui elle va creer le DOssierSuivi
+//			DossierSuivi ds = new DossierSuivi("Ceci est un suivi"); // envoie un string dans une methode qui elle va creer le DossierSuivi
 //			stub.set_dossierSuivi(ds);
-			stub.setSuivi("Ceci est un suivi");
+//			System.out.println(stub.get_dossierSuivi());
+			stub.get_dossierSuivi().set_suivi("Ceci est un suivi");
+			System.out.println(stub.get_dossierSuivi().get_suivi());
+			
+			System.out.println(stub.get_dossierSuivi().getClass().toString());
+			System.out.println(stub.get_dossierSuivi().getClass().toString());
 			
 			System.out.println(stub.description());
 			

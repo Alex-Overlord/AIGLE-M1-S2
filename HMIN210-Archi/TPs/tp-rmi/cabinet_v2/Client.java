@@ -18,8 +18,8 @@ public class Client {
 			System.setSecurityManager(manager);
 			
 			ICabinetVeterinaire stub = (ICabinetVeterinaire) registry.lookup("CabinetVeterinaire");
-			Animal lion = new Animal("Lion", "Bob", new Species("mammifere", 12), "Panthera leo", new DossierSuivi(null));
-			stub.getPatients().addAnimal(lion);
+			Animal lion = new Animal("Lion", "Bob", new Species("Panthera leo", 12), "Le lion d'Afrique", new DossierSuivi(null));
+//			stub.getPatients().addAnimal(lion);
 //			stub.getAnimal()
 //			String response = stub.toString();
 //			System.out.println("response: " + response);
@@ -30,7 +30,7 @@ public class Client {
 //			stub.set_species(new Species("Mammifere", 20));
 //			stub.set_race("etre vivant");
 //			
-//			System.out.println(stub.description());
+			System.out.println(stub.toString());
 		} catch (Exception e) {
 			System.err.println("Client exception: " + e.toString());
 			e.printStackTrace();

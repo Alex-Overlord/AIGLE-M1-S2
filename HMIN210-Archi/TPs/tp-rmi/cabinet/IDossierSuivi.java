@@ -5,5 +5,6 @@ import java.rmi.RemoteException;
 
 public interface IDossierSuivi extends Remote {
 
-	public void setSuivi(String suivi) throws RemoteException;
+	public String get_suivi() throws RemoteException;
+	public void set_suivi(String suivi) throws RemoteException;
 }

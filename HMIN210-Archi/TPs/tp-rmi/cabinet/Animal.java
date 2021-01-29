@@ -3,7 +3,7 @@ package cabinet;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-public class Animal extends UnicastRemoteObject implements IAnimal{
+public class Animal extends UnicastRemoteObject implements IAnimal {
 
 	private static final long serialVersionUID = 1L;
 	private String _name;
@@ -14,6 +14,7 @@ public class Animal extends UnicastRemoteObject implements IAnimal{
 	
 	protected Animal() throws RemoteException {
 		super();
+		_dossierSuivi = new DossierSuivi();
 	}
 	protected Animal(String name, String masterName, Species species, String race, DossierSuivi dossierSuivi) throws RemoteException {
 		super();
@@ -67,11 +68,8 @@ public class Animal extends UnicastRemoteObject implements IAnimal{
 	}
 	
 	@Override
-	public void setSuivi(String suivi) {
-		_dossierSuivi.setSuivi(suivi);
+	public void setSuivi(String suivi) throws RemoteException {
+		_dossierSuivi.set_suivi(suivi);
 	}
   
-//	public void addSuivi(String suivi) {
-//		
-//	}
 }

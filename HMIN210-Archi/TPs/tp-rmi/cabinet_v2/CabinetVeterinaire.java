@@ -15,20 +15,17 @@ public class CabinetVeterinaire extends UnicastRemoteObject implements ICabinetV
 		super();
 	}
 	
-	public ArrayList<Animal> getPatients() throws RemoteException {
-		return patients;
-	}
-
-	public void setPatients(ArrayList<Animal> patients) throws RemoteException {
-		this.patients = patients;
-	}
-
+	@Override
+	public ArrayList<Animal> getPatients() { return patients; }
+	@Override
+	public void setPatients(ArrayList<Animal> patients) { this.patients = patients; }
+	
 	@Override
 	public String toString() {
 		return "CabinetVeterinaire [patients=" + patients + "]";
 	}
 	
-	public Animal getAnimal(String animal_name) throws RemoteException {
+	public Animal getAnimal(String animal_name) {
 		for (Animal a : patients) {
 			if (animal_name == a.get_name()) {
 				return a;
@@ -36,7 +33,7 @@ public class CabinetVeterinaire extends UnicastRemoteObject implements ICabinetV
 		}
 		return null;
 	}
-	public void addAnimal(Animal animal) throws RemoteException {
+	public void addAnimal(Animal animal) {
 		this.getPatients().add(animal);
 	}
 	

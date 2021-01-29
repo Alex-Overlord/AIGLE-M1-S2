@@ -13,9 +13,9 @@ public interface IAnimal extends Remote {
 	public void set_species(Species _species) throws RemoteException;
 	public String get_race() throws RemoteException;
 	public void set_race(String _race) throws RemoteException;
-	public DossierSuivi get_dossierSuivi() throws RemoteException;
+	public IDossierSuivi get_dossierSuivi() throws RemoteException;
 	public void set_dossierSuivi(DossierSuivi _dossierSuivi) throws RemoteException;
 	
 	public String description() throws RemoteException;
-	void setSuivi(String suivi) throws RemoteException;
+	public void setSuivi(String suivi) throws RemoteException;
 }
