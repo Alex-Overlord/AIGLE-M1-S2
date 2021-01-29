@@ -62,7 +62,7 @@ public class Animal extends UnicastRemoteObject implements IAnimal{
 				+"MasterName : "+this._masterName+"\n"
 				+"Species : "+this._species+"\n"
 				+"Race : "+this._race+"\n"
-				+"DossierSuivi : "+this._dossierSuivi;
+				+"DossierSuivi : "+this._dossierSuivi+"\n";
 		return result;
 	}
 	
