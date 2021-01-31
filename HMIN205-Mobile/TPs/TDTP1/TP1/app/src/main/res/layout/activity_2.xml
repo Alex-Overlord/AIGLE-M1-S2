@@ -1,13 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activity2">
+    android:layout_height="match_parent">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Activity 2"/>
-</LinearLayout>
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/a2_tv_activityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a2_tv_activityName"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:paddingVertical="20sp"/>
+
+        <!-- first name -->
+        <TextView
+            android:id="@+id/a2_tv_labelFirstName"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_firstName"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/a2_tv_activityName"/>
+
+        <TextView
+            android:id="@+id/a2_tv_firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_firstName"
+            android:textSize="20sp"
+            android:layout_below="@+id/a2_tv_activityName"
+            android:layout_toRightOf="@id/a2_tv_labelFirstName"
+            android:layout_toEndOf="@id/a2_tv_labelFirstName" />
+
+        <!-- last name -->
+        <TextView
+            android:id="@+id/a2_tv_labelLastName"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_lastName"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/a2_tv_firstName"/>
+
+        <TextView
+            android:id="@+id/a2_tv_lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_lastName"
+            android:textSize="20sp"
+            android:layout_below="@+id/a2_tv_firstName"
+            android:layout_toRightOf="@id/a2_tv_labelLastName"
+            android:layout_toEndOf="@id/a2_tv_labelLastName" />
+
+        <!-- age -->
+        <TextView
+            android:id="@+id/a2_tv_labelAge"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_age"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/a2_tv_lastName"/>
+
+        <TextView
+            android:id="@+id/a2_tv_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_age"
+            android:textSize="20sp"
+            android:layout_below="@+id/a2_tv_lastName"
+            android:layout_toEndOf="@id/a2_tv_labelAge"
+            android:layout_toRightOf="@id/a2_tv_labelAge" />
+
+        <!-- domain -->
+        <TextView
+            android:id="@+id/a2_tv_labelDomain"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_domain"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/a2_tv_age"/>
+
+        <TextView
+            android:id="@+id/a2_tv_domain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_domain"
+            android:textSize="20sp"
+            android:layout_below="@+id/a2_tv_age"
+            android:layout_toEndOf="@id/a2_tv_labelAge"
+            android:layout_toRightOf="@id/a2_tv_labelAge" />
+
+        <!-- phone -->
+        <TextView
+            android:id="@+id/a2_tv_labelPhone"
+            android:layout_width="150sp"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_phone"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_below="@+id/a2_tv_domain"/>
+
+        <TextView
+            android:id="@+id/a2_tv_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10sp"
+            android:hint="@string/a1_til_phone"
+            android:textSize="20sp"
+            android:layout_below="@+id/a2_tv_domain"
+            android:layout_toEndOf="@id/a2_tv_labelPhone"
+            android:layout_toRightOf="@id/a2_tv_labelPhone" />
+
+        <Button
+            android:id="@+id/a2_btn_back"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:layout_margin="10sp"
+            android:layout_below="@id/a2_tv_labelPhone"
+            android:text="@string/a2_btn_back"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/a2_btn_ok"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:layout_margin="10sp"
+            android:text="@string/a2_btn_ok"
+            android:textSize="20sp"
+            android:layout_below="@id/a2_tv_labelPhone"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+
+    </RelativeLayout>
+</ScrollView>

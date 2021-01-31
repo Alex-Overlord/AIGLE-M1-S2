@@ -1,12 +1,18 @@
 <resources>
     <string name="app_name">TP1</string>
-    <string name="tv">Veuillez remplir les champs suivants :</string>
-    <string name="firstname">Prénom</string>
-    <string name="lastname">Nom</string>
-    <string name="age">Age</string>
-    <string name="domain">Domaine</string>
-    <string name="phone">Téléphone</string>
+    <string name="a1_tv_fill">Remplissez les champs suivant</string>
+    <string name="a1_til_firstName">Prénom</string>
+    <string name="a1_til_lastName">Nom</string>
+    <string name="a1_til_age">Age</string>
+    <string name="a1_til_domain">Domaine</string>
+    <string name="a1_til_phone">Téléphone</string>
+    <string name="a1_btn_submit">Envoyer</string>
     <string name="validate">Valider</string>
-    <string name="form" />
     <string name="cancel">Annuler</string>
+    <string name="required">Requis</string>
+    <string name="a2_tv_activityName">Activité 2</string>
+    <string name="a2_btn_ok">OK</string>
+    <string name="a2_btn_back">Retour</string>
+    <string name="a3_tv_activityName">Activité 3</string>
+    <string name="a3_btn_call">Appeler</string>
 </resources>

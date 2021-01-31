@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity3"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/a3_tv_activityName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/a3_tv_activityName"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:paddingVertical="20sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200sp"
+        android:src="@mipmap/ic_phone_foreground"/>
+
+    <TextView
+        android:id="@+id/a3_tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/a3_btn_call"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_margin="20sp"
+        android:text="@string/a3_btn_call"
+        android:textSize="30sp"/>
+
+</LinearLayout>
