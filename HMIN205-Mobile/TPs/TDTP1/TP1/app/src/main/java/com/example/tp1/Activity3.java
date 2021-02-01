@@ -23,12 +23,12 @@ public class Activity3 extends AppCompatActivity {
         Bundle bundle = intent.getExtras();
 
         String string_phone = (String) bundle.get(EXTRA_PHONE);
+        Uri uri = Uri.parse("tel:" + string_phone);
         a3_tv_phone.setText(string_phone);
 
         Button a3_btn_call = findViewById(R.id.a3_btn_call);
         a3_btn_call.setOnClickListener(v -> {
-            Intent callIntent = new Intent(Intent.ACTION_DIAL);
-            callIntent.setData(Uri.parse("tel:0783351686"));
+            Intent callIntent = new Intent(Intent.ACTION_CALL, uri);
             startActivity(callIntent);
         });
     }
