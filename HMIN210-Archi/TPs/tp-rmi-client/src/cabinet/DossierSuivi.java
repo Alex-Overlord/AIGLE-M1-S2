@@ -1,4 +1,5 @@
-package cabinet_v2;
+package cabinet;
+
 
 //import java.io.Serializable;
 //import java.rmi.Remote;

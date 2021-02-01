@@ -1,4 +1,5 @@
-package cabinet_v2;
+package cabinet;
+
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

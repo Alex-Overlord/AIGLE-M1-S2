@@ -1,7 +1,7 @@
 package cabinet;
 
 import java.rmi.registry.LocateRegistry;
-import java.util.Scanner;
+//import java.util.Scanner;
 import java.rmi.registry.Registry;
 
 public class Client {

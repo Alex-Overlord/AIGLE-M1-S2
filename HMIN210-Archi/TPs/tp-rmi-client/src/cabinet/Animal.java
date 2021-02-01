@@ -1,4 +1,6 @@
-package cabinet_v2;
+package cabinet;
+
+
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
