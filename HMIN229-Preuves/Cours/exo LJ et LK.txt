@@ -1,0 +1,191 @@
+Propositions à démontrer dans LJ et LK :
+
+1. A => B => A
+2. (A => B => C) => (A => B) => A => C
+3. A ^ B => B
+4. B => A v B
+5. (A v B) => (A => C) => (B => C) => C
+6. A => bot => -A
+7. bot => A
+8. (A <=> B) => A => B
+9. (A <=> B) => B => A
+10. (A => B) => (B => A) => (A <=> B)
+
+Dans LJ :
+
+1. 
+
+--------- ax
+A, B => A
+----------- => right
+A |- B => A
+---------------- => right
+|- A => (B => A)
+
+2. longue
+
+----------------------------- 
+A => (B => C), A => B, A |- C
+------------------------------- => right
+A => (B => C), A => B |- A => C
+------------------------------------- => right
+A => (B => C) |- (A => B) => (A => C)
+-------------------------------------------- => right
+|- (A => (B => C)) => ((A => B) => (A => C))
+
+3. LJ
+
+--------- ax
+A, B |- B
+---------- ^ left
+A ^ B |- B
+------------- => right
+|- A ^ B => B
+
+3. LK
+
+-------- ax
+B |- A, B
+---------- ∨ right
+B |- A ∨ B
+------------- => R
+|- B => A ∨ B
+
+4. LJ et LK
+
+------ ax
+B |- B
+---------- v right 2
+B |- A v B
+--------------- => right
+|- B => (A v B)
+
+5. longue
+
+6. LJ et LK
+
+------------ bot left
+A, bot |- -A
+-------------- => right
+A |- bot => -A
+------------------- => right
+|- A => (bot => -A)
+
+
+7. LJ et LK
+
+-------- bot left
+bot |- A
+----------- => right 
+|- bot => A
+
+8. LK
+
+------------ ax            ------------ ax
+A |- B, A, B               A, A, B |- B
+--------------- <=> left
+A <=> B, A |- B
+----------------- => right
+A <=> B |- A => B
+------------------------ => right
+|- (A <=> B) => (A => B)
+
+8. LJ
+
+------ ax                   ------ ax
+A |- A                      B |- B
+--------------- <=> left 1
+A <=> B, A |- B
+----------------- => right
+A <=> B |- A => B
+------------------------ => right
+|- (A <=> B) => (A => B)
+
+9. LJ et LK (pas fini)
+
+A <=> B |- 
+------------------------ => right
+|- (A <=> B) => (B => A)
+
+
+Propositions à démontrer dans LJ(em) et LK :
+
+1. forall x. P(x) => exist y. P(y) v Q(y)
+2. (exist x. P(x) v Q(x)) => (exist x. P(x)) v (exist x. Q(x))
+3. (forall x. P(x)) ^ (forall x. Q(x)) => forall x. P(x) ^ Q(x)
+4. (forall x. P(x) ^ Q(x)) => (forall x. P(x)) ^ (forall x. Q(x))
+5. (forall x. -P(x)) => -(exist x. P(x))
+6. -(forall x. P(x)) => exist x. -P(x)
+
+1.
+
+-----------------------------
+P(x) => exist y. P(y) v Q(y)
+------------------------------------------- forall right
+|- forall x. P(x) => exist y. P(y) v Q(y)
+
+2. LJ(em) et LK
+
+------------ ax                                        ------------ ax
+P(x) |- P(x)                                           Q(x) |- Q(x)
+--------------------- exist right                      --------------------- exist right
+P(x) |- exist x. P(x)                                  Q(x) |- exist x. Q(x)
+----------------------------------------- v right 1    ----------------------------------------- v right 2
+P(x) |- (exist x. P(x)) v (exist x. Q(x))              Q(x) |- (exist x. P(x)) v (exist x. Q(x))
+------------------------------------------------ v left
+P(x) v Q(x) |- (exist x. P(x)) v (exist x. Q(x))
+----------------------------------------------------------- exist left
+(exist x. P(x) v Q(x)) |- (exist x. P(x)) v (exist x. Q(x))
+-------------------------------------------------------------- => right
+|- (exist x. P(x) v Q(x)) => (exist x. P(x)) v (exist x. Q(x))
+
+6. LK
+
+--------------
+|- -P(x), P(x)
+----------------------- exist right
+|- exist x. -P(x), P(x)
+--------------------------------- forall right
+|- exist x. -P(x), forall x. P(x)
+----------------------------------- - left
+-(forall x. P(x)) |- exist x. -P(x)
+-------------------------------------- => right
+|- -(forall x. P(x)) => exist x. -P(x)
+
+6 LJ(em)
+
+-------------- ax
+-P(x) |- -P(x)
+----------------------- exist right
+-P(x) |- exist x. -P(x)
+----------------------------- - left
+-exist x. -P(x), -P(x) |- bot
+------------------------- - right
+-exist x. -P(x) |- --P(x)
+----------------------- em
+-exist x. -P(x) |- P(x)
+--------------------------------- forall right
+-exist x. -P(x) |- forall x. P(x)
+--------------------------------------- - left
+-forall x. P(x), -exist x. -P(x) |- bot
+------------------------------------- - right
+-(forall x. P(x)) |- --exist x. -P(x)
+----------------------------------- em
+-(forall x. P(x)) |- exist x. -P(x)
+-------------------------------------- => right
+|- -(forall x. P(x)) => exist x. -P(x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
