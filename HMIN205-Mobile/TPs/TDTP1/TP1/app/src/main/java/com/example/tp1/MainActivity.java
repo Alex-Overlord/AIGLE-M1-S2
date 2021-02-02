@@ -93,18 +93,4 @@ public class MainActivity extends AppCompatActivity {
         intentA2.putExtra(EXTRA_PHONE, string_phone);
         startActivity(intentA2);
     }
-
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-//    {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode == -1)
-//        {
-//            a1_tiet_firstName.setText(data.getStringExtra(EXTRA_PHONE));
-//            a1_tiet_lastName.setText(data.getStringExtra(EXTRA_PHONE));
-//            a1_tiet_age.setText(data.getStringExtra(EXTRA_PHONE));
-//            a1_tiet_domain.setText(data.getStringExtra(EXTRA_PHONE));
-//            a1_tiet_phone.setText(data.getStringExtra(EXTRA_PHONE));
-//        }
-//    }
 }

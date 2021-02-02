@@ -28,6 +28,7 @@
         android:textSize="40sp"/>
 
     <Button
+        android:drawableLeft="@drawable/baseline_phone_24"
         android:id="@+id/a3_btn_call"
         android:layout_width="match_parent"
         android:layout_height="100sp"

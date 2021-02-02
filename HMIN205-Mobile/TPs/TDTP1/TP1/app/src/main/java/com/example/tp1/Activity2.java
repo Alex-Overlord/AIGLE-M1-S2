@@ -55,16 +55,4 @@ public class Activity2 extends AppCompatActivity {
             startActivity(intentA1);
         });
     }
-
-//    @Override
-//    public void onBackPressed() {
-//        Intent intent = new Intent();
-//        intent.putExtra(EXTRA_FIRST_NAME, string_firstName);
-//        intent.putExtra(EXTRA_LAST_NAME, string_lastName);
-//        intent.putExtra(EXTRA_AGE, string_age);
-//        intent.putExtra(EXTRA_DOMAIN, string_domain);
-//        intent.putExtra(EXTRA_PHONE, string_phone);
-//        setResult(Activity.RESULT_OK, intent);
-//        super.onBackPressed();
-//    }
 }
