@@ -6,437 +6,1024 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
-
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Departure city"
-        android:gravity="center"
-        android:layout_margin="10sp" />
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+        <EditText
+            android:id="@+id/a1_et_departure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/departure_station"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/a1_et_arrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/arrival_station"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/a1_et_go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_to_go"
+            android:gravity="center"
+            android:inputType="date"/>
+        <EditText
+            android:id="@+id/a1_et_return"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/date_to_return"
+            android:gravity="center"
+            android:inputType="date"/>
+        <Button
+            android:id="@+id/a1_btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/a1_btn_search"
+            android:textSize="16sp"/>
+    </LinearLayout>
 
-    <EditText
+    <View
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="City of arrival"
-        android:gravity="center"
-        android:layout_margin="10sp" />
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
 
     <ScrollView
-        android:layout_height="match_parent"
-        android:layout_width="match_parent">
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <!-- List -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
 
-            <!-- Lige -->
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"
+                            android:text="@string/time_of_the_day_example1a"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"
+                            android:text="@string/name_station_example1a"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"
+                            android:text="@string/time_of_the_day_example1b"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"
+                            android:text="@string/name_station_example1b"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"
+                        android:text="@string/name_train_example1a"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"
+                        android:text="@string/price_example1a"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"
+                            android:text="@string/time_of_the_day_example2a"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"
+                            android:text="@string/name_station_example2a"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"
+                            android:text="@string/time_of_the_day_example2b"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"
+                            android:text="@string/name_station_example2b"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"
+                        android:text="@string/name_train_example2a"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"
+                        android:text="@string/price_example2a"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
+
+            <!-- Line -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10sp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="horizontal">
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="250dp"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:orientation="vertical">
+                    <!-- Departure -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/departure_station"/>
+                    </LinearLayout>
+                    <!-- Arrival -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/time_of_the_day"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/arrival_station"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- Column -->
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/name_train"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="@string/price"/>
+                </LinearLayout>
             </LinearLayout>
 
-            <!-- Lige -->
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp">
+                android:layout_height="1dp"
+                android:alpha="0.5"
+                android:background="?android:attr/listDivider"
+                android:layout_marginVertical="5dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Name"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Date"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingVertical="10sp"
-                    android:paddingHorizontal="20sp"
-                    android:hint="Time of the day"/>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
+        </LinearLayout> <!-- List -->
     </ScrollView>
 </LinearLayout>

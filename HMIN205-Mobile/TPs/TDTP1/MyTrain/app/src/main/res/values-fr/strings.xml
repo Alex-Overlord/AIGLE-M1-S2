@@ -1,14 +1,14 @@
 <resources>
     <string name="app_name">MyTrain</string>
-    <string name="time_of_the_day">Time</string>
-    <string name="name_station">Name station</string>
-    <string name="price">Price</string>
+    <string name="time_of_the_day">Heure</string>
+    <string name="name_station">Nom de la gare</string>
+    <string name="price">Prix</string>
     <string name="name_train">Train</string>
-    <string name="a1_btn_search">Search</string>
-    <string name="departure_station">Departure station</string>
-    <string name="arrival_station">Arrival station</string>
-    <string name="date_to_go">Date to go</string>
-    <string name="date_to_return">Date to return</string>
+    <string name="a1_btn_search">Chercher</string>
+    <string name="departure_station">Gare de départ</string>
+    <string name="arrival_station">Gare d\'arrivée</string>
+    <string name="date_to_go">Date de départ</string>
+    <string name="date_to_return">Date de retour</string>
     <string name="time_of_the_day_example1a">18:02</string>
     <string name="name_station_example1a">MONTPELLIER SAINT-ROCH</string>
     <string name="name_train_example1a">OUIGO</string>
