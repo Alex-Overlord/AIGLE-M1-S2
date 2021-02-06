@@ -16,18 +16,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/departure_station"
+            android:text="@string/name_station_example1a"
             android:gravity="center"/>
         <EditText
             android:id="@+id/a1_et_arrival"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/arrival_station"
+            android:text="Paris"
             android:gravity="center"/>
         <EditText
             android:id="@+id/a1_et_go"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/date_to_go"
+            android:text="05/02/21"
             android:gravity="center"
             android:inputType="date"/>
         <EditText
@@ -35,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/date_to_return"
+            android:text="08/02/21"
             android:gravity="center"
             android:inputType="date"/>
         <Button
