@@ -48,11 +48,11 @@ public class MainActivity extends AppCompatActivity {
         Button a1_btn_submit = findViewById(R.id.a1_btn_submit);
 
         // à enlever à la fin
-        a1_tiet_firstName.setText("Ambre");
-        a1_tiet_lastName.setText("Lamouchi");
-        a1_tiet_age.setText("22");
+        a1_tiet_firstName.setText("Steve");
+        a1_tiet_lastName.setText("Jobs");
+        a1_tiet_age.setText("66");
         a1_tiet_domain.setText("Informatique");
-        a1_tiet_phone.setText("0783351686");
+        a1_tiet_phone.setText("0700101010");
 
         a1_btn_submit.setOnClickListener(v -> {
             String form_result = ""
