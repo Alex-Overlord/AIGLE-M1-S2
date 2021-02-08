@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TP2exo2</string>
+    <string name="sensor_unavailable">Ce capteur est indisponible</string>
+</resources>

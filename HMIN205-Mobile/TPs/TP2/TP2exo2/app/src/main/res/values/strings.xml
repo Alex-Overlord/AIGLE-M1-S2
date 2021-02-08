@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">TP2exo2</string>
+    <string name="sensor_unavailable">This sensor is not unavailable</string>
 </resources>

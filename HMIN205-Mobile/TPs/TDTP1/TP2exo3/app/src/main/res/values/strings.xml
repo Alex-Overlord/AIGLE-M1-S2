@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TP2exo3</string>
+    <string name="accelerator_unavailable">Accelerometer unavailable</string>
+</resources>
