@@ -1,0 +1,10 @@
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\bin\Debug\PremierProjet.exe.config
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\bin\Debug\PremierProjet.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\bin\Debug\PremierProjet.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\obj\Debug\PremierProjet.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\obj\Debug\PremierProjet.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\obj\Debug\PremierProjet.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\obj\Debug\PremierProjet.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\bin\Debug\ClassLibrary1.dll
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\bin\Debug\ClassLibrary1.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\PremierProjet\obj\Debug\PremierProjet.csproj.CopyComplete

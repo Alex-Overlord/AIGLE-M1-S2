@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LrdFOLVhbqz5NJTvVsyScXebEyZHxU6ruuXC7Rx7v+Nc2lWH1Rq3ch1Gzw5iwJN1em052Mf/JP8aF75Khd78iQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Alex\\Documents\\GitHub\\AIGLE-M1-S2\\HMIN210-Archi\\TPs\\TP2-injection\\ClassLibrary1\\ClassLibrary1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alex\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Alex\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

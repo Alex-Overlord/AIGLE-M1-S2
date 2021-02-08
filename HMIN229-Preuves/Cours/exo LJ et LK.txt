@@ -103,9 +103,14 @@ A <=> B |- A => B
 
 9. LJ et LK (pas fini)
 
-A <=> B |- 
------------------------- => right
-|- (A <=> B) => (B => A)
+______ ax ______ ax
+B |- B    A |- A
+_______________ <-> left 2
+A <-> B, B |- A
+_________________ -> right
+A <-> B |- B -> A
+________________________ -> right
+|- (A <-> B) -> (B -> A)
 
 
 Propositions à démontrer dans LJ(em) et LK :
@@ -119,10 +124,16 @@ Propositions à démontrer dans LJ(em) et LK :
 
 1.
 
------------------------------
-P(x) => exist y. P(y) v Q(y)
-------------------------------------------- forall right
-|- forall x. P(x) => exist y. P(y) v Q(y)
+____________ ax
+P(x) |- P(x)
+____________________ \/ right 1
+P(x) |- P(x) \/ Q(x)
+_____________________________ exist right
+P(x) |- exist y. P(y) \/ Q(y)
+__________________________________ -> right
+|- P(x) -> (exist y. P(y) \/ Q(y))
+____________________________________________ forall right
+|- forall x. P(x) -> (exist y. P(y) \/ Q(y))
 
 2. LJ(em) et LK
 
@@ -138,6 +149,12 @@ P(x) v Q(x) |- (exist x. P(x)) v (exist x. Q(x))
 (exist x. P(x) v Q(x)) |- (exist x. P(x)) v (exist x. Q(x))
 -------------------------------------------------------------- => right
 |- (exist x. P(x) v Q(x)) => (exist x. P(x)) v (exist x. Q(x))
+
+3. LJ
+
+
+________________________________________________________________
+((forall x. P(x)) ^ (forall x. Q(x))) => (forall x. P(x) ^ Q(x))
 
 6. LK
 

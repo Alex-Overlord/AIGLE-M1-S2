@@ -1,0 +1,13 @@
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\bin\Debug\netcoreapp3.1\DelegateTest.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\bin\Debug\netcoreapp3.1\DelegateTest.deps.json
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\bin\Debug\netcoreapp3.1\DelegateTest.runtimeconfig.json
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\bin\Debug\netcoreapp3.1\DelegateTest.runtimeconfig.dev.json
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\bin\Debug\netcoreapp3.1\DelegateTest.dll
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\bin\Debug\netcoreapp3.1\DelegateTest.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\obj\Debug\netcoreapp3.1\DelegateTest.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\obj\Debug\netcoreapp3.1\DelegateTest.AssemblyInfoInputs.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\obj\Debug\netcoreapp3.1\DelegateTest.AssemblyInfo.cs
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\obj\Debug\netcoreapp3.1\DelegateTest.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\obj\Debug\netcoreapp3.1\DelegateTest.dll
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\obj\Debug\netcoreapp3.1\DelegateTest.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\DelegateTest\obj\Debug\netcoreapp3.1\DelegateTest.genruntimeconfig.cache

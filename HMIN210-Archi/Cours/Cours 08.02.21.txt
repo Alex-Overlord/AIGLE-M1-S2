@@ -1,0 +1,11 @@
+- protected : accès sous classe mais pas meme package.
+- internal : assembly
+
+> ce qu'on a pas en java : 
+- les structures
+- forcer un passage par référence
+- les indexeurs
+- des itérables avec "yield return"
+- pas obligé de déclarer les exceptions pouvant être jéter dans la signarture des méthodes.
+- Les délégués (pointeurs sur méthodes)
+- les contrats
