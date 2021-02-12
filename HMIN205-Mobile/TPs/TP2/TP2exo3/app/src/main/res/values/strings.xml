@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">TP2exo3</string>
-    <string name="accelerator_unavailable">Accelerometer unavailable</string>
+    <string name="accelerater_unavailable">Accelerometer unavailable</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="x">x</string>
+    <string name="y">y</string>
+    <string name="z">z</string>
 </resources>

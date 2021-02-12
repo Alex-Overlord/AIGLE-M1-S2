@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TP2exo5</string>
+    <string name="gyroscope">gyroscope</string>
+    <string name="x">x</string>
+    <string name="y">y</string>
+    <string name="z">z</string>
+    <string name="light_off">OFF</string>
+    <string name="gyroscope_unavailable">Gyroscope unavailable</string>
+    <string name="light_on">ON</string>
+</resources>

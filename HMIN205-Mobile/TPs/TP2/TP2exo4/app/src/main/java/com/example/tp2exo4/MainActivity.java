@@ -1,21 +1,19 @@
-package com.example.tp2exo3;
+package com.example.tp2exo4;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
 
     SensorManager sensorManager;
-    Sensor accelerometer;
+    Sensor gyroscope;
     TextView tv0;
     TextView tv1;
     TextView tv2;
@@ -27,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         setContentView(R.layout.activity_main);
 
         sensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
-        accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        gyroscope = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
 
         tv0 = findViewById(R.id.tv0);
         tv1 = findViewById(R.id.tv1);
@@ -35,45 +33,30 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         tv3 = findViewById(R.id.tv3);
 
         boolean supported = sensorManager.registerListener(this,
-                accelerometer,
+                gyroscope,
                 SensorManager.SENSOR_DELAY_UI);
 
         if (!supported) {
-            sensorManager.unregisterListener(this, accelerometer);
-            tv0.setText(R.string.accelerater_unavailable);
+            sensorManager.unregisterListener(this, gyroscope);
+            tv0.setText(R.string.gyroscope_unavailable);
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        sensorManager.registerListener(this,
-                accelerometer,
-                SensorManager.SENSOR_DELAY_UI);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        sensorManager.unregisterListener(this);
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
-        if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            onAccelerometerChanged(event);
+        if (event.sensor.getType() == Sensor.TYPE_GYROSCOPE) {
+            onGyroscopeChanged(event);
         }
     }
 
-    @SuppressLint("SetTextI18n")
-    private void onAccelerometerChanged(SensorEvent event) {
+    private void onGyroscopeChanged(SensorEvent event) {
         int red = Color.rgb(255,0,0);
         int green = Color.rgb(0,255,0);
         int black = Color.rgb(0,0,0);
 
-        float x = event.values[0];
-        float y = event.values[1];
-        float z = event.values[2];
+        float x = event.values[0]; // vitesse angulaire autour de x
+        float y = event.values[1]; // vitesse angulaire autour de y
+        float z = event.values[2]; // vitesse angulaire autour de z
 
         tv1.setText("x = " + (int) x);
         tv2.setText("y = " + (int) y);
@@ -106,12 +89,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-        switch (accuracy) {
-            case SensorManager.SENSOR_STATUS_ACCURACY_LOW:
-            case SensorManager.SENSOR_STATUS_ACCURACY_MEDIUM:
-            case SensorManager.SENSOR_STATUS_ACCURACY_HIGH:
-            case SensorManager.SENSOR_STATUS_UNRELIABLE:
-        }
-        Log.d("Sensor", sensor.getType() + ":" + accuracy);
+
     }
 }
