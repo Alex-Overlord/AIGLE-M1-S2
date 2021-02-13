@@ -20,23 +20,6 @@
         android:id="@+id/tv1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/x"
-        android:textSize="60sp"
-        android:gravity="center"/>
-
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/y"
-        android:textSize="60sp"
-        android:gravity="center"/>
-
-    <TextView
-        android:id="@+id/tv3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/z"
         android:textSize="60sp"
         android:gravity="center"/>
 

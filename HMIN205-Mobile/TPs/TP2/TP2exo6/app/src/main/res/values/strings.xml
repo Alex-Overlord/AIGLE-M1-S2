@@ -2,7 +2,4 @@
     <string name="app_name">TP2exo6</string>
     <string name="proximity_unavailable">Proximity unavailable</string>
     <string name="proximity">Proximity</string>
-    <string name="x">x</string>
-    <string name="y">y</string>
-    <string name="z">z</string>
 </resources>
