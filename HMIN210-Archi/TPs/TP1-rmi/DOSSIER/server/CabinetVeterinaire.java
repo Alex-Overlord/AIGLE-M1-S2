@@ -9,6 +9,7 @@ public class CabinetVeterinaire extends UnicastRemoteObject implements ICabinetV
 
 	private static final long serialVersionUID = 1L;
 	ArrayList<IAnimal> patients = new ArrayList<IAnimal>();
+	ArrayList<IConnexion> connexions = new ArrayList<IConnexion>();
 	
 	protected CabinetVeterinaire() throws RemoteException {
 		super();
@@ -31,9 +32,7 @@ public class CabinetVeterinaire extends UnicastRemoteObject implements ICabinetV
 	public void setPatients(ArrayList<IAnimal> patients) { 
 		this.patients = patients; 
 	}
-	
 
-	
 	public IAnimal getAnimal(String animal_name) throws RemoteException {
 //		System.out.println("[getAnimal]");
 		for (IAnimal a : patients) {
@@ -47,6 +46,15 @@ public class CabinetVeterinaire extends UnicastRemoteObject implements ICabinetV
 	public void addAnimal(String name, String masterName, Species species, String race, String suivi) throws RemoteException {
 		Animal animal = new Animal(name, masterName, species, race, new DossierSuivi(suivi));
 		this.getPatients().add(animal);
+		if (patients.size() == 4) {
+			for (IConnexion co : connexions) {
+				co.alerte();
+			}
+		}
+	}
+	
+	public void addConnexion(IConnexion co) throws RemoteException {
+		connexions.add(co);
 	}
 	
 }

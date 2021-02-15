@@ -12,4 +12,5 @@ public interface ICabinetVeterinaire extends Remote {
 	public IAnimal getAnimal(String animal_name) throws RemoteException;
 	public void addAnimal(String name, String masterName, Species species, String race, String suivi) throws RemoteException;
 	public String description() throws RemoteException;
+  public void addConnexion(IConnexion co) throws RemoteException;
 }

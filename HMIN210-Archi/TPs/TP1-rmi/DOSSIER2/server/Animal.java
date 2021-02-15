@@ -60,12 +60,14 @@ public class Animal extends UnicastRemoteObject implements IAnimal {
 	
 	@Override
 	public String description() {
-		String result = "\n[Description]\n";
-		result += "Name : "+this._name+"\n"
-				+"MasterName : "+this._masterName+"\n"
-				+"Species : "+this._species+"\n"
-				+"Race : "+this._race+"\n"
-				+"DossierSuivi : "+this._dossierSuivi+"\n";
+		String result = "";
+		//= "\n[Animal]\n";
+		result += this._name + " ";
+				//+= "Name : "+this._name+"\n";
+				// +"MasterName : "+this._masterName+"\n"
+				// +"Species : "+this._species+"\n"
+				// +"Race : "+this._race+"\n"
+				// +"DossierSuivi : "+this._dossierSuivi+"\n";
 		return result;
 	}
 	

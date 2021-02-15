@@ -1,0 +1,5 @@
+Dans CabinetVeterinaire :
+- créer une deuxième liste qui est une arraylist de IConnexion
+- Quand on ajouter un animal on vérifie si il y a une alerte, si c'est le cas on boucle sur la liste de IConnexion pour appeler la fonction alerte sur chaque indice.
+
+La fonction alerte va afficher un message au client.
