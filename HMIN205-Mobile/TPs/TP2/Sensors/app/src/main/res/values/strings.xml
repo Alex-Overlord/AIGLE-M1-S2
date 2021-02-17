@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Sensors</string>
+    <string name="list_of_exercices">List of exercices</string>
+    <string name="a0_btn1_text">1. Sensors list</string>
+    <string name="a0_btn2_text">2. Unavailable sensors detector</string>
+    <string name="sensor_unavailable">This sensor is not unavailable</string>
+    <string name="unavailable_sensors">List of unavailable sensors</string>
+    <string name="list_of_sensors">List of available sensors</string>
+    <string name="a0_btn3_text">3. Accelerometer</string>
+    <string name="x">x</string>
+    <string name="y">y</string>
+    <string name="z">z</string>
+    <string name="accelerometer">Accelerometor</string>
+    <string name="accelerater_unavailable">Accelerometer unavailable</string>
+    <string name="a0_btn4_text">4. Direction</string>
+    <string name="direction">Direction</string>
+    <string name="gyroscope_unavailable">Gyroscope unavailable</string>
+    <string name="a0_btn5_text">5. Shake to turn on the flash</string>
+    <string name="shake_to_turn_on_the_flash">Shake to turn on the flash</string>
+    <string name="light_off">OFF</string>
+    <string name="light_on">ON</string>
+    <string name="a0_btn6_text">6. Proximity</string>
+    <string name="proximity">Proximity</string>
+    <string name="proximity_unavailable">Proximity sensor unavailable</string>
+</resources>

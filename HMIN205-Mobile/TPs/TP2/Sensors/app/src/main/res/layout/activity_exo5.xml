@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="10dp"
+    tools:context=".Exo5">
+
+    <TextView
+        android:id="@+id/a5_tv0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingVertical="3dp"
+        android:text="@string/shake_to_turn_on_the_flash"
+        android:textSize="25sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/a5_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/x"
+            android:textSize="60sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/a5_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/y"
+            android:textSize="60sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/a5_tv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/z"
+            android:textSize="60sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/a5_tv4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/light_off"
+            android:textSize="80sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/a5_tv5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="60sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>
