@@ -1,0 +1,14 @@
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\bin\Debug\netcoreapp3.1\IoD.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\bin\Debug\netcoreapp3.1\IoD.deps.json
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\bin\Debug\netcoreapp3.1\IoD.runtimeconfig.json
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\bin\Debug\netcoreapp3.1\IoD.runtimeconfig.dev.json
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\bin\Debug\netcoreapp3.1\IoD.dll
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\bin\Debug\netcoreapp3.1\IoD.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\bin\Debug\netcoreapp3.1\Ninject.dll
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\obj\Debug\netcoreapp3.1\IoD.AssemblyInfoInputs.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\obj\Debug\netcoreapp3.1\IoD.AssemblyInfo.cs
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\obj\Debug\netcoreapp3.1\IoD.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\obj\Debug\netcoreapp3.1\IoD.csproj.CopyComplete
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\obj\Debug\netcoreapp3.1\IoD.dll
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\obj\Debug\netcoreapp3.1\IoD.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP2-injection\Librairy\obj\Debug\netcoreapp3.1\IoD.genruntimeconfig.cache
