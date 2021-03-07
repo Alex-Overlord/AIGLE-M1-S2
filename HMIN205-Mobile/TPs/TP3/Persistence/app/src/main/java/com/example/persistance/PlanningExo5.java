@@ -1,8 +1,8 @@
 package com.example.persistance;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.TextView;
@@ -15,6 +15,9 @@ import androidx.lifecycle.ViewModelProviders;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.text.MessageFormat;
+import java.util.Timer;
+import java.util.TimerTask;
+import java.util.concurrent.Executor;
 
 import static java.lang.Math.random;
 
@@ -49,28 +52,34 @@ public class PlanningExo5 extends AppCompatActivity {
         model.getSlots().observe(this, observer);
 
         pla5_btn_file_data.setOnClickListener(v -> {
-            try {
-                FileOutputStream fos = openFileOutput("planning", Context.MODE_PRIVATE);
-                fos.write("Rencontre client Dupont (".concat(String.valueOf(random()).concat(")\n")).getBytes());
-                fos.write("Travailler le dossier recrutement (".concat(String.valueOf(random()).concat(")\n")).getBytes());
-                fos.write("Réunion équipe (".concat(String.valueOf(random()).concat(")\n")).getBytes());
-                fos.write("Préparation dossier vente (".concat(String.valueOf(random()).concat(")\n")).getBytes());
-                fos.close();
-
-                FileInputStream fis = openFileInput("planning");
-                StringBuilder content = new StringBuilder();
-                byte[] buffer = new byte[1024];
-                int n = 0;
-
-                while ((n = fis.read(buffer)) != -1)
-                    content.append(new String(buffer, 0, n));
-
-                String[] slots = content.toString().split("\n");
-                model.getSlots().setValue(slots);
-                Log.i(TAG, "Slots mis à jour");
-                Toast.makeText(this, "Slots mis à jour", Toast.LENGTH_SHORT).show();
-            } catch (Exception ignored) {
-            }
+            updateData(model);
         });
+
+        new Handler().postDelayed(() -> updateData(model), 5000);
+    }
+
+    public void updateData(PlanningModelExo5 model) {
+        try {
+            FileOutputStream fos = openFileOutput("planning", Context.MODE_PRIVATE);
+            fos.write("Rencontre client Dupont (".concat(String.valueOf(random()).concat(")\n")).getBytes());
+            fos.write("Travailler le dossier recrutement (".concat(String.valueOf(random()).concat(")\n")).getBytes());
+            fos.write("Réunion équipe (".concat(String.valueOf(random()).concat(")\n")).getBytes());
+            fos.write("Préparation dossier vente (".concat(String.valueOf(random()).concat(")\n")).getBytes());
+            fos.close();
+
+            FileInputStream fis = openFileInput("planning");
+            StringBuilder content = new StringBuilder();
+            byte[] buffer = new byte[1024];
+            int n = 0;
+
+            while ((n = fis.read(buffer)) != -1)
+                content.append(new String(buffer, 0, n));
+
+            String[] slots = content.toString().split("\n");
+            model.getSlots().setValue(slots);
+            Log.i(TAG, "Slots mis à jour");
+            Toast.makeText(this, "Slots mis à jour", Toast.LENGTH_SHORT).show();
+        } catch (Exception ignored) {
+        }
     }
 }

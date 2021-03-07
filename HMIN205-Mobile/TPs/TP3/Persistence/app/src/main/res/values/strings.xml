@@ -24,4 +24,17 @@
     <string name="pla5_tv_4">Préparation dossier vente</string>
     <string name="pla5_btn_liveData">Live Data</string>
     <string name="a0_btn5_text">Exercice 5 : LiveData</string>
+    <string name="a0_btn6_text">Exercice 6 : Base de données Room</string>
+    <string name="a6">Base de données Room</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="todo">TODO</string>
+    <string name="room">Room</string>
 </resources>

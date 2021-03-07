@@ -27,7 +27,6 @@ public class Exo5 extends AppCompatActivity {
 
     private static int id = 0;
     private final String TAG = this.getClass().getSimpleName();
-    String fileName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +58,12 @@ public class Exo5 extends AppCompatActivity {
             if (savedInstanceState.containsKey(ID)) {
                 id = Integer.parseInt(savedInstanceState.get(ID).toString());
             }
+        } else {
+            // facilite les tests
+            a5_et_lastName.setText("Dupont");
+            a5_et_firstName.setText("Michel");
+            a5_et_age.setText("34");
+            a5_et_phone.setText("0612345678");
         }
 
         // Vérification des champs
@@ -71,7 +76,7 @@ public class Exo5 extends AppCompatActivity {
             }
         });
 
-        // Sauvegarde des données dans un fichier
+        // Affichage du planning
         a5_btn_planning.setOnClickListener(v -> {
             if (fieldEmpty()) {
                 Toast.makeText(this, "Missing field, user unregistered.", Toast.LENGTH_SHORT).show();
@@ -80,10 +85,9 @@ public class Exo5 extends AppCompatActivity {
                     id = generateID();
                     Toast.makeText(this, "User registered : " + id, Toast.LENGTH_SHORT).show();
                 }
-                fileName = a5_et_lastName.getText().toString() + id;
 
                 Intent intent = new Intent(Exo5.this, PlanningExo5.class);
-                intent.putExtra(F_KEY, fileName);
+                intent.putExtra(F_KEY, a5_et_lastName.getText().toString() + id);
                 startActivity(intent);
             }
         });

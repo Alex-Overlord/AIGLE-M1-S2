@@ -10,6 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Persistance">
+        <activity android:name=".Exo6MainActivity" />
+        <activity android:name=".Exo6" />
         <activity android:name=".PlanningExo5" />
         <activity android:name=".Exo5" />
         <activity android:name=".Planning" />

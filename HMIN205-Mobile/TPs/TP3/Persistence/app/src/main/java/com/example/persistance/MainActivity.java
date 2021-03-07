@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
         Button btn3 = findViewById(R.id.a0_btn3);
         Button btn4 = findViewById(R.id.a0_btn4);
         Button btn5 = findViewById(R.id.a0_btn5);
-//        Button btn6 = findViewById(R.id.a0_btn6);
+        Button btn6 = findViewById(R.id.a0_btn6);
 
         btn1.setOnClickListener(v -> openExo1());
         btn2.setOnClickListener(v -> openExo2());
         btn3.setOnClickListener(v -> openExo3());
         btn4.setOnClickListener(v -> openExo4());
         btn5.setOnClickListener(v -> openExo5());
-//        btn6.setOnClickListener(v -> openExo6());
+        btn6.setOnClickListener(v -> openExo6());
     }
 
     private void openExo1() {
@@ -48,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Exo5.class);
         startActivity(intent);
     }
-//    private void openExo6() {
-//        Intent intent = new Intent(MainActivity.this, Exo6.class);
-//        startActivity(intent);
-//    }
+    private void openExo6() {
+        Intent intent = new Intent(MainActivity.this, Exo6.class);
+        startActivity(intent);
+    }
 }

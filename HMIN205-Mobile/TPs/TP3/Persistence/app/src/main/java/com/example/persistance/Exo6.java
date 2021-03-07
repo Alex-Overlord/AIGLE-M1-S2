@@ -3,26 +3,20 @@ package com.example.persistance;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
+public class Exo6 extends AppCompatActivity {
 
-public class Exo4 extends AppCompatActivity {
-
-    private EditText a4_et_lastName;
-    private EditText a4_et_firstName;
-    private EditText a4_et_age;
-    private EditText a4_et_phone;
-    private EditText a4_et_password;
+    private EditText a6_et_lastName;
+    private EditText a6_et_firstName;
+    private EditText a6_et_age;
+    private EditText a6_et_phone;
+    private EditText a6_et_password;
 
     public final static String LAST_NAME = "LAST_NAME";
     public final static String FIRST_NAME = "FIRST_NAME";
@@ -33,42 +27,48 @@ public class Exo4 extends AppCompatActivity {
 
     private static int id = 0;
     private final String TAG = this.getClass().getSimpleName();
-    String fileName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.exo4);
+        setContentView(R.layout.exo6);
 
-        a4_et_lastName = findViewById(R.id.a4_et_lastName);
-        a4_et_firstName = findViewById(R.id.a4_et_firstName);
-        a4_et_age = findViewById(R.id.a4_et_age);
-        a4_et_phone = findViewById(R.id.a4_et_phone);
-        a4_et_password = findViewById(R.id.a4_et_password);
-        Button a4_btn_validate = findViewById(R.id.a4_btn_validate);
-        Button a4_btn_planning = findViewById(R.id.a4_btn_planning);
+        a6_et_lastName = findViewById(R.id.a6_et_lastName);
+        a6_et_firstName = findViewById(R.id.a6_et_firstName);
+        a6_et_age = findViewById(R.id.a6_et_age);
+        a6_et_phone = findViewById(R.id.a6_et_phone);
+        a6_et_password = findViewById(R.id.a6_et_password);
+        Button a6_btn_validate = findViewById(R.id.a6_btn_validate);
+        Button a6_btn_planning = findViewById(R.id.a6_btn_planning);
+        Button a6_btn_room = findViewById(R.id.a6_btn_room);
 
         // Récupération des données
         if (savedInstanceState != null) {
             if (savedInstanceState.containsKey(LAST_NAME)) {
-                a4_et_lastName.setText(savedInstanceState.getString(LAST_NAME));
+                a6_et_lastName.setText(savedInstanceState.getString(LAST_NAME));
             }
             if (savedInstanceState.containsKey(FIRST_NAME)) {
-                a4_et_firstName.setText(savedInstanceState.getString(FIRST_NAME));
+                a6_et_firstName.setText(savedInstanceState.getString(FIRST_NAME));
             }
             if (savedInstanceState.containsKey(AGE)) {
-                a4_et_age.setText(savedInstanceState.getString(AGE));
+                a6_et_age.setText(savedInstanceState.getString(AGE));
             }
             if (savedInstanceState.containsKey(PHONE)) {
-                a4_et_phone.setText(savedInstanceState.getString(PHONE));
+                a6_et_phone.setText(savedInstanceState.getString(PHONE));
             }
             if (savedInstanceState.containsKey(ID)) {
                 id = Integer.parseInt(savedInstanceState.get(ID).toString());
             }
+        } else {
+            // facilite les tests
+            a6_et_lastName.setText("Dupont");
+            a6_et_firstName.setText("Michel");
+            a6_et_age.setText("34");
+            a6_et_phone.setText("0612345678");
         }
 
         // Vérification des champs
-        a4_btn_validate.setOnClickListener(v -> {
+        a6_btn_validate.setOnClickListener(v -> {
             if (fieldEmpty()) {
                 Toast.makeText(this, "Missing field, user unregistered.", Toast.LENGTH_SHORT).show();
             } else if (id == 0) {
@@ -78,7 +78,7 @@ public class Exo4 extends AppCompatActivity {
         });
 
         // Affichage du planning
-        a4_btn_planning.setOnClickListener(v -> {
+        a6_btn_planning.setOnClickListener(v -> {
             if (fieldEmpty()) {
                 Toast.makeText(this, "Missing field, user unregistered.", Toast.LENGTH_SHORT).show();
             } else {
@@ -86,37 +86,35 @@ public class Exo4 extends AppCompatActivity {
                     id = generateID();
                     Toast.makeText(this, "User registered : " + id, Toast.LENGTH_SHORT).show();
                 }
-                fileName = a4_et_lastName.getText().toString() + id;
 
-                try {
-                    FileOutputStream fos;
-                    fos = openFileOutput(fileName, Context.MODE_PRIVATE);
-                    fos.write(a4_et_lastName.getText().toString().concat("\n").getBytes());
-                    fos.write(a4_et_firstName.getText().toString().concat("\n").getBytes());
-                    fos.write(a4_et_age.getText().toString().concat("\n").getBytes());
-                    fos.write(a4_et_phone.getText().toString().concat("\n").getBytes());
-                    fos.write(String.valueOf(id).getBytes());
-                    Log.i(TAG, "Ecriture du fichier " + fileName);
-                    fos.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
+                Intent intent = new Intent(Exo6.this, PlanningExo5.class);
+                intent.putExtra(F_KEY, a6_et_lastName.getText().toString() + id);
+                startActivity(intent);
+            }
+        });
+
+        a6_btn_room.setOnClickListener(v -> {
+            if (fieldEmpty()) {
+                Toast.makeText(this, "Missing field, user unregistered.", Toast.LENGTH_SHORT).show();
+            } else {
+                if (id == 0) {
+                    id = generateID();
+                    Toast.makeText(this, "User registered : " + id, Toast.LENGTH_SHORT).show();
                 }
 
-                Intent intent = new Intent(Exo4.this, Planning.class);
-                intent.putExtra(F_KEY, fileName);
+                Intent intent = new Intent(Exo6.this, Exo6MainActivity.class);
+                intent.putExtra(F_KEY, a6_et_lastName.getText().toString() + id);
                 startActivity(intent);
             }
         });
     }
 
     public boolean fieldEmpty() {
-        return TextUtils.isEmpty(a4_et_lastName.getText())
-                || TextUtils.isEmpty(a4_et_firstName.getText())
-                || TextUtils.isEmpty(a4_et_age.getText())
-                || TextUtils.isEmpty(a4_et_phone.getText())
-                || TextUtils.isEmpty(a4_et_password.getText());
+        return TextUtils.isEmpty(a6_et_lastName.getText())
+                || TextUtils.isEmpty(a6_et_firstName.getText())
+                || TextUtils.isEmpty(a6_et_age.getText())
+                || TextUtils.isEmpty(a6_et_phone.getText())
+                || TextUtils.isEmpty(a6_et_password.getText());
     }
 
     public int generateID() {
@@ -126,10 +124,10 @@ public class Exo4 extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
-        savedInstanceState.putString(LAST_NAME, a4_et_lastName.getText().toString());
-        savedInstanceState.putString(FIRST_NAME, a4_et_firstName.getText().toString());
-        savedInstanceState.putString(AGE, a4_et_age.getText().toString());
-        savedInstanceState.putString(PHONE, a4_et_phone.getText().toString());
+        savedInstanceState.putString(LAST_NAME, a6_et_lastName.getText().toString());
+        savedInstanceState.putString(FIRST_NAME, a6_et_firstName.getText().toString());
+        savedInstanceState.putString(AGE, a6_et_age.getText().toString());
+        savedInstanceState.putString(PHONE, a6_et_phone.getText().toString());
         if (id != 0) {
             savedInstanceState.putString(ID, String.valueOf(id));
         }
