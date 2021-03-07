@@ -11,4 +11,17 @@
     <string name="a0_btn1_text">Exercice 1 : Sauvegarde de l\'état d\'une activité</string>
     <string name="a0_btn2_text">Exercice 2 : Manipulation de fichiers</string>
     <string name="submit">Submit</string>
+    <string name="a0_btn3_text">Exercice 3 : LifeCycle</string>
+    <string name="a2">Manipulation de fichiers</string>
+    <string name="a0_btn4_text">Exercice 4 : ViewModel</string>
+    <string name="planning">Display Planning</string>
+    <string name="a4">ViewModel</string>
+    <string name="a3">LifeCycle</string>
+    <string name="a5">LiveData</string>
+    <string name="pla5_tv_1">Rencontre client Dupont</string>
+    <string name="pla5_tv_2">Travailler le dossier recrutement</string>
+    <string name="pla5_tv_3">Réunion équipe</string>
+    <string name="pla5_tv_4">Préparation dossier vente</string>
+    <string name="pla5_btn_liveData">Live Data</string>
+    <string name="a0_btn5_text">Exercice 5 : LiveData</string>
 </resources>

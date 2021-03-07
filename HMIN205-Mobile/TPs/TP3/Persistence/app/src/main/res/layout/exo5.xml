@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="5dp"
-    tools:context=".Exo2">
+    tools:context=".Exo5">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/a2"
+        android:text="@string/a5"
         android:textSize="30sp" />
 
     <View
@@ -32,7 +32,7 @@
             android:layout_margin="5dp">
 
             <EditText
-                android:id="@+id/a2_et_lastName"
+                android:id="@+id/a5_et_lastName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/lastName"
@@ -41,7 +41,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <EditText
-                android:id="@+id/a2_et_firstName"
+                android:id="@+id/a5_et_firstName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/firstName"
@@ -50,7 +50,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <EditText
-                android:id="@+id/a2_et_age"
+                android:id="@+id/a5_et_age"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/age"
@@ -59,7 +59,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <EditText
-                android:id="@+id/a2_et_phone"
+                android:id="@+id/a5_et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/phone"
@@ -68,7 +68,7 @@
                 android:layout_marginBottom="10dp"/>
 
             <EditText
-                android:id="@+id/a2_et_password"
+                android:id="@+id/a5_et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
@@ -77,19 +77,18 @@
                 android:layout_marginBottom="10dp"/>
 
             <Button
-                android:id="@+id/a2_btn_validate"
+                android:id="@+id/a5_btn_validate"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginBottom="10dp"
                 android:text="@string/validate"/>
 
             <Button
-                android:id="@+id/a2_btn_submit"
+                android:id="@+id/a5_btn_planning"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginBottom="10dp"
-                android:text="@string/submit" />
-
+                android:text="@string/planning" />
 
         </LinearLayout>
 

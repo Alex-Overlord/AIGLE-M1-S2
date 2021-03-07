@@ -40,26 +40,26 @@
             android:text="@string/a0_btn2_text"
             android:padding="20dp"/>
 
-<!--        <Button-->
-<!--            android:id="@+id/a0_btn3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/a0_btn3_text"-->
-<!--            android:padding="20dp"/>-->
+        <Button
+            android:id="@+id/a0_btn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a0_btn3_text"
+            android:padding="20dp"/>
 
-<!--        <Button-->
-<!--            android:id="@+id/a0_btn4"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/a0_btn4_text"-->
-<!--            android:padding="20dp"/>-->
+        <Button
+            android:id="@+id/a0_btn4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a0_btn4_text"
+            android:padding="20dp"/>
 
-<!--        <Button-->
-<!--            android:id="@+id/a0_btn5"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="@string/a0_btn5_text"-->
-<!--            android:padding="20dp"/>-->
+        <Button
+            android:id="@+id/a0_btn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a0_btn5_text"
+            android:padding="20dp"/>
 
 <!--        <Button-->
 <!--            android:id="@+id/a0_btn6"-->
