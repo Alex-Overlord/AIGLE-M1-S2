@@ -1,3 +1,0 @@
-A OU -B IN forall R.(C AND -B) AND -(C OR D) AND exists R.(B OR C)
-
-A IN forall R.(C AND -B)

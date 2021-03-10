@@ -1,0 +1,7 @@
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp2\bin\Debug\ConsoleApp2.exe.config
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp2\bin\Debug\ConsoleApp2.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp2\bin\Debug\ConsoleApp2.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp2\obj\Debug\MathConsole.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp2\obj\Debug\ConsoleApp2.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp2\obj\Debug\ConsoleApp2.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp2\obj\Debug\MathConsole.csprojAssemblyReference.cache

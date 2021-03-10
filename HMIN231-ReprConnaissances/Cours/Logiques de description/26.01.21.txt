@@ -1,0 +1,57 @@
+phi C(X) OR phi D(X)
+
+exit phi Y (phi R(X,Y)
+
+slide 13 : (premier N) il y a au moins n fleche R qui parte de X
+
+(second N) pour toutes les N fleches qui vont de X à Y, il faut qu'il y ai au moins deux égaux
+
+slide 15 :
+phi A ET (exist R. (not B)) (X)
+= phi A ET exist Y (phi R (X, Y) AND phi (not B) (Y))
+= phi A ET exist Y (phi R (X, Y) AND not phi B (Y)
+= phi A ET exist Y .(R (X, Y) AND not B (Y))
+
+---
+# trad FOL
+
+A ET EXISTS R.(NEG B
+ΦA(X) ^ Φ(ER.(-B)(X))
+ΦA(X) ^ EY (ΦR(X,Y) ^ Φ(-B)(Y))
+ΦA(X) ^ EY (ΦR(X,Y) ^ -ΦB(Y))
+A(X) ^ EY (R(X,Y) ^ -B(Y))
+---
+
+slide 16 :
+phi(EXIST(R AND S).(FORALL T.C)) (X)
+= EXIST Y (phi (R AND S). (
+= 
+
+---
+# trad FOL 2
+
+EXISTS(R AND S).(FORALL T.C)
+EY ( Φ(R^S)(X,Y) ^ Φ(FORALL T.C)(Y) )
+EY ( Φ(R AND S)(X,Y) ^ Φ(FORALL T.C)(Y) )
+EY ( ΦR(X,Y) ^ ΦS(X,Y) ^ EZ ( ΦT(Y,Z) -> ΦC(Z) ) )
+EY ( R(X,Y) ^ S(X,Y) ^ EZ ( T(Y,Z) -> C(Z) ) )
+---
+
+le point sépare syntaxiquement le nom du role et le nom du concept
+
+FOL (3) : <= 2(R AND S)
+
+phi <= 2(R AND S) (X)
+= FORALL(Y1)...FORALL(N+1) ((phi (R AND S) (X, Y1) AND ... AND phi (R AND S) (X, Y3)) => UNIONOR(1<=i<j<=3) Yi = Yj)
+
+
+phi (EXIST(R AND S).C) (X)
+= EXIST Y(R(X,Y) AND S(X,Y) AND C(Y)
+
+phi ((EXIST R.C) AND (EXIST S.C)
+= EXIST Y(R(X,Y1) AND C(Y1)) AND EXIST Y2(S(X,Y2) AND C(Y2)
+
+phi EXIST (R AND S).C INCLU (EXIST
+
+phi (C AND EXIST R.T EXIST S.(D AND E) (X)
+= phi (FORALL X (phi 

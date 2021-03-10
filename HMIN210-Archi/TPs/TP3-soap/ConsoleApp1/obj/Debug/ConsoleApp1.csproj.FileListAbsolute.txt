@@ -1,0 +1,7 @@
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\Alex\Documents\GitHub\AIGLE-M1-S2\HMIN210-Archi\TPs\TP3-soap\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
