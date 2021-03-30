@@ -7,11 +7,11 @@
     tools:context=".LoginActivity">
 
     <include
-        android:id="@+id/register_bar"
+        android:id="@+id/login_bar"
         layout="@layout/bar_layout"/>
 
     <LinearLayout
-        android:layout_below="@id/register_bar"
+        android:layout_below="@id/login_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"

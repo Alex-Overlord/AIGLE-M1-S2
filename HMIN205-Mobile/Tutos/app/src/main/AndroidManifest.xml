@@ -24,6 +24,9 @@
         <activity android:name=".LoginActivity"
             android:parentActivityName=".StartActivity" />
 
+        <activity android:name=".MainActivity"
+            android:parentActivityName=".StartActivity" />
+
     </application>
 
 </manifest>

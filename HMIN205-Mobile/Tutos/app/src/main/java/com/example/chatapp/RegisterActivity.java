@@ -35,12 +35,12 @@ public class RegisterActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Register");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        auth = FirebaseAuth.getInstance();
+
         username = findViewById(R.id.username);
         email = findViewById(R.id.email);
         password = findViewById(R.id.password);
         btn_register = findViewById(R.id.btn_register);
-
-        auth = FirebaseAuth.getInstance();
 
         btn_register.setOnClickListener(v -> {
             String txt_username = username.getText().toString();

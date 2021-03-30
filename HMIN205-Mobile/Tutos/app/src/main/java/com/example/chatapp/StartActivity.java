@@ -21,13 +21,8 @@ public class StartActivity extends AppCompatActivity {
         login = findViewById(R.id.login);
         register = findViewById(R.id.register);
 
-        login.setOnClickListener(v -> {
-            startActivity(new Intent(StartActivity.this, LoginActivity.class));
-        });
-
-        register.setOnClickListener(v -> {
-            startActivity(new Intent(StartActivity.this, RegisterActivity.class));
-        });
+        login.setOnClickListener(v -> startActivity(new Intent(this, LoginActivity.class)));
+        register.setOnClickListener(v -> startActivity(new Intent(this, RegisterActivity.class)));
     }
 
 }
