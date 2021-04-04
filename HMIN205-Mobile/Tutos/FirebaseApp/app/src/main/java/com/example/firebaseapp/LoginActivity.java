@@ -23,6 +23,18 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseUser firebaseUser;
 
     @Override
+    protected void onStart() {
+        super.onStart();
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+
+        // Checking for users existence: Saving the current user
+        if (firebaseUser != null) {
+            Intent i = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(i);
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -34,13 +46,6 @@ public class LoginActivity extends AppCompatActivity {
 
         // Firebase Auth
         auth = FirebaseAuth.getInstance();
-        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-
-        // Checking for users existence: Saving the current user
-        if (firebaseUser != null) {
-            Intent i = new Intent(LoginActivity.this, MainActivity.class);
-            startActivity(i);
-        }
 
         // Register Button
         registerRedirectBtn.setOnClickListener(v -> {
