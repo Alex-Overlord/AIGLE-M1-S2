@@ -111,12 +111,10 @@ Fixpoint isort (l : list nat) : list nat :=
   | h::t => insert h (isort t)
   end.
 
-(*
 Print insert.
 Print isort.
 Print le_dec.
 Print left.
-*)
 
 Lemma isort_ex1 : isort [5; 4; 3; 2; 1] = [1; 2; 3; 4; 5].
 Proof.
