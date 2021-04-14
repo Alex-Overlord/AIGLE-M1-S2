@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "766204782721",
+    "project_id": "auth-ce3cb",
+    "storage_bucket": "auth-ce3cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766204782721:android:5c11dff2c18a782e3ec580",
+        "android_client_info": {
+          "package_name": "com.example.authapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766204782721-28u5dmh2j6sc5p2nptnl60e5gg9f3ikt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXpMvD88tocod64RYwqk3_yomv2bWjuAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766204782721-28u5dmh2j6sc5p2nptnl60e5gg9f3ikt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
