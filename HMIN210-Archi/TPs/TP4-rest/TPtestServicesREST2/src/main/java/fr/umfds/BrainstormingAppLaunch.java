@@ -13,7 +13,7 @@ public class BrainstormingAppLaunch {
     public static final URI BASE_URI = getBaseURI();
 
     private static URI getBaseURI() {
-        // ici choisissez l'adresse à laquelle vous rendez accessible votre API, ainsi que le numéro de port;
+        // ici choisissez l'adresse à laquelle vous rendez accessible votre API, ainsi que le numéro de port
         return UriBuilder.fromUri("http://localhost/rest").port(8080).build();
     }
 
