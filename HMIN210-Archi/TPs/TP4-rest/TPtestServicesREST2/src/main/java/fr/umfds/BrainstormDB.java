@@ -12,17 +12,15 @@ public class BrainstormDB {
 
     public BrainstormDB() {}
 
-    public BrainstormDB(ArrayList<Brainstorm> brainstormList) {
-        brainstorms = brainstormList;
+    public BrainstormDB(ArrayList<Brainstorm> brainstorms) {
+        this.brainstorms = brainstorms;
     }
 
     public static ArrayList<Brainstorm> getBrainstorms() {
-        brainstorms.sort(Brainstorm::compareTo);
-        return brainstorms ;
+        return brainstorms;
     }
 
-    public static void setBrainstorms(ArrayList<Brainstorm> brainstorms) {
-        BrainstormDB.brainstorms = brainstorms;
+    public ArrayList<Brainstorm> getBrainstorms2() {
+        return brainstorms;
     }
-
 }
